@@ -8,8 +8,8 @@ set -o nounset
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 BUILD_DIR=$1
-#CACHE_DIR=$2
-#ENV_DIR=$3
+CACHE_DIR=$2
+ENV_DIR=$3
 
 #----------------------------------------------------------------------
 
