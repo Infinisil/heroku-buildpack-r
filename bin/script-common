@@ -62,13 +62,13 @@ fetch() {
 
 with_fakechroot() {
   /usr/bin/env \
-      HOME=/src \
+      HOME=/app \
       PATH="/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH" \
-      FAKECHROOT_EXCLUDE_PATH="/src:/dev:/proc:/sys:/etc/resolv.conf:/etc/host.conf:/lib/modules" \
-    /src/fakechroot/bin/fakechroot \
-        --lib /src/fakechroot/lib/fakechroot/libfakechroot.so \
+      FAKECHROOT_EXCLUDE_PATH="/app:/dev:/proc:/sys:/etc/resolv.conf:/etc/host.conf:/lib/modules" \
+    /app/fakechroot/bin/fakechroot \
+        --lib /app/fakechroot/lib/fakechroot/libfakechroot.so \
         --environment chroot.env \
-        --config-dir /src/fakechroot/etc/fakechroot -- "$@"
+        --config-dir /app/fakechroot/etc/fakechroot -- "$@"
 }
 
 in_chroot() {
